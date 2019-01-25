@@ -8,7 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">        
         <!-- Styles -->
         <style>
             html, body {
@@ -62,8 +63,25 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .social:hover {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+        
+            .social {
+            -webkit-transform: scale(0.8);
+            /* Browser Variations: */
+            -moz-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+        }
+
         </style>
     </head>
+    <!--Body-->
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -86,12 +104,12 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba
                 </div>
 
                  <div class="links">
-                    <a href="#">Bootcamp</a>
+                    <a href="/bootcamp">Bootcamp</a>
                     <a href="#">Hackaton</a>
                     <a href="#">Blog</a>
                     <a href="#">Skills</a>
-                    <a href="">Linkedin</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://www.linkedin.com/in/marcella-hadderingh-013115176/"><i class="fab fa-linkedin fa-3x social"></i> </a>
+                    <a href="https://github.com/MarcellaHadderingh"><i class="fab fa-github-square fa-3x social"></i></</a>
                 </div>
             </div>
         </div>
