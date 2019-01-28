@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/bootcamp', function () {
     return view('bootcamp');
 });
+
+Route::get('/blog', function () {
+    return view('blog');
+});
