@@ -1,6 +1,7 @@
 @extends('layout')
 
 
+
 @section('title', "Blog");
 
 @section('content')

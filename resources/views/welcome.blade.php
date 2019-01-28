@@ -110,6 +110,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba
                     <a href="#">Skills</a>
                     <a href="https://www.linkedin.com/in/marcella-hadderingh-013115176/"><i class="fab fa-linkedin fa-3x social"></i> </a>
                     <a href="https://github.com/MarcellaHadderingh"><i class="fab fa-github-square fa-3x social"></i></</a>
+                    <a href="mailto:marcellavanduyn@gmail.com" target="_blank" class="mail"><i class="fa fa-envelope fa-3x social"></i></a> 
                 </div>
             </div>
         </div>
