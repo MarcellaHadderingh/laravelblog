@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .logo {
@@ -78,8 +79,4 @@ body {
 .web {
     background-color: #27646E;
     color: white;
-}
-
-.txt1 {
-    color: red;
 }
