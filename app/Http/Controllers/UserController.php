@@ -25,4 +25,5 @@ class UserController extends Controller
              }
              return view('profile', array('user' => Auth::user()) );
     }
+   
 }
