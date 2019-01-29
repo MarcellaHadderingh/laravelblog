@@ -20,8 +20,13 @@ Route::get('/bootcamp', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    $posts = \App\Post::all();
+    return view('blog', [
+        'posts' => $posts
+    ]);
 });
+
+
 
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
