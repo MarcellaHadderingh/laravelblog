@@ -24,6 +24,7 @@ Route::get('/blog', function () {
 });
 
 Route::get('profile', 'UserController@profile');
+Route::post('profile', 'UserController@update_avatar');
 
 Auth::routes();
 
