@@ -1,7 +1,6 @@
 @extends('layout')
 
-
-@section('title', "Bootcamp");
+@section('title', "Bootcamp")
 
 @section('content')
 
