@@ -23,6 +23,10 @@ Route::get('/blog', function () {
     return view('blog');
 });
 
+Route::get('profile', 'UserController@profile');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
