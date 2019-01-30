@@ -8,10 +8,11 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+   
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <title>@yield('title')</title>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <style>
 </style>
@@ -20,7 +21,7 @@
             <div id="app">
                     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
                         <div class="container">
-                            <a class="navbar-brand social" href="/"><a href="/"><img class="logo social" src="image/logo.PNG" alt="logo"></a>
+                            <a class="navbar-brand social" href="/home"><img class="logo social" src="image/logo.PNG" alt="logo"></a>
                             <a class="nav-link social txt" href="/bootcamp">Bootcamp</a>
                             <a class="nav-link social txt " href="#">Hackaton</a>
                             <a class="nav-link social txt " href="/blog">Blog</a>
@@ -49,18 +50,19 @@
                                             </li>
                                         @endif
                                     @else
-                                        <li class="nav-item dropdown">
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <li class="nav-item dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="postition:relative; padding-left:50px;">
+                                                <img src="/uploads/avatar/{{Auth::user() -> avatar }}" style="width:50px; height:50px; position:absolute; top:0px; left:0px; border-radius:50%;">
                                                 {{ Auth::user()->name }} <span class="caret"></span>
                                             </a>
             
                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" href="{{ url('/profile') }}"><i class="fas fa-user"></i> Profile</a>
-                                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>
-                                                    {{ __('Logout') }}
-                                                </a>
+                                                    <a class="dropdown-item" href="{{ url('/profile') }}"><i class="fas fa-user"></i> Profile</a>
+                                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                                       onclick="event.preventDefault();
+                                                                     document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>
+                                                        {{ __('Logout') }}
+                                                    </a>
                         
                                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                     @csrf
