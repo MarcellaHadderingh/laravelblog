@@ -29,10 +29,11 @@ Route::get('/blog', function () {
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
 
+Route::patch('user/{user}','UserController@update');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/post', 'PostController');
+Route::resource('/blog', 'PostController');

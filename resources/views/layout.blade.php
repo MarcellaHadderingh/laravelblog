@@ -14,7 +14,6 @@
     <title>@yield('title')</title>
 </head>
 <style>
-
 </style>
 
 <body>

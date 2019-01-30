@@ -25,5 +25,27 @@ class UserController extends Controller
              }
              return view('profile', array('user' => Auth::user()) );
     }
+
+    public function update(Request $request, \App\User $user)
+    {
+        $user->update(request()->all());
+    //     $user = Auth::user();
+
+    //     $data = $this->validate($request, [
+    //         'name' => 'required',
+    //         'email' => 'required',
+    //     ]);
+
+    //     $user->name = $data['name'];
+    //     $user->email = $data['email'];
+
+    //     $user->save();
+    //     return redirect('/user_edit/'.Auth::user()->id)->with('success', 'User has been updated!!');
+        
+      return redirect('/profile');
+
+      //dd($user->id);
+
+    }
    
 }
