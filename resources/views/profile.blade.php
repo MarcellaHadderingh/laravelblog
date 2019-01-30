@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -16,10 +18,10 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top:50px;">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card text-white bg-dark">
                     <div class="card-header"><h5>Profile</h5></div>
                     <div class="card-body">
                             {{$user->name}}
@@ -31,10 +33,10 @@
         </div>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top:50px;" >
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card text-white bg-dark">
                 <div class="card-header"><h5>Profile edit</h5></div>
                 <div class="card-body">
                     <form method="POST" action="/user/{{$user->id}}">
@@ -49,6 +51,28 @@
         </div>
     </div>
 </div>
+
+<div class="container" style="margin-top:50px;" >
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card text-white bg-dark">
+                    <div class="card-header"><h5>Add Blog</h5></div>
+                    <div class="card-body">
+                        <form method="POST" action="">
+                            <h4>Blog Title:</h4>
+                        <input type="text" name="title">
+                        
+                        <h4 style="margin-top:10px;">Blog text:</h4>
+                        <textarea name="text" id="area" cols="50" rows="10"></textarea>
+                        <br>
+                        <input type="submit" value="save">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 

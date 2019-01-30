@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand social" href="/"><a href="/"><img class="logo social" src="image/logo.PNG" alt="logo"></a>
+                <a class="navbar-brand social" href="/home"><a href="/"><img class="logo social" src="image/logo.PNG" alt="logo"></a>
                 <a class="nav-link social txt" href="/bootcamp">Bootcamp</a>
                 <a class="nav-link social txt " href="#">Hackaton</a>
                 <a class="nav-link social txt " href="/blog">Blog</a>
