@@ -20,10 +20,8 @@ Route::get('/bootcamp', function () {
 });
 
 Route::get('/blog', function () {
-    $posts = \App\Post::all();
-    return view('blog', [
-        'posts' => $posts
-    ]);
+    $posts = App\Post::all();
+    return view('blog', compact('posts'));
 });
 
 
@@ -31,8 +29,10 @@ Route::get('/blog', function () {
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::resource('/post', 'PostController');
