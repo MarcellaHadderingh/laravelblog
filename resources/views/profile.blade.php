@@ -43,7 +43,7 @@
                         @csrf
                         @method('PATCH')
                     <input type="text" name="name" value="{{$user->name}}">
-                    <input type="mail" name="mail" value="{{$user->email}}">
+                    <input type="password" name="password" placeholder="Password...." value="{{$user->password}}">
                     <input type="submit" value="save">
                     </form>
                 </div>
@@ -58,12 +58,13 @@
                 <div class="card text-white bg-dark">
                     <div class="card-header"><h5>Add Blog</h5></div>
                     <div class="card-body">
-                        <form method="POST" action="">
-                            <h4>Blog Title:</h4>
-                        <input type="text" name="title">
-                        
+                        <form method="POST" action="/post">
+                            @csrf
+                            @method('POST')                           
+                            <h4>Blog title:</h4>
+                        <input type="text" name="title" style="width: 500px;"> 
                         <h4 style="margin-top:10px;">Blog text:</h4>
-                        <textarea name="text" id="area" cols="50" rows="10"></textarea>
+                        <textarea name="text" id="area" cols="60" rows="15"></textarea>
                         <br>
                         <input type="submit" value="save">
                         </form>
@@ -73,7 +74,23 @@
         </div>
     </div>
 
+    <div class="container" style="margin-top:50px;" >
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card text-white bg-dark">
+                        <div class="card-header"><h5>Edit blog</h5></div>
+                        <div class="card-body">
+                         <form>
+                                <h4>Blog title:</h4>
+                              <input type="text" name="title" placeholder="Title">
+                              <br>
+                              <h4>Blog text:</h4>
+                              <textarea name="text" id="area" cols="60" rows="15"></textarea>
+                              <input type="submit" value="update">
 
+                         </form>
+    
+    
 
 
 @endsection
