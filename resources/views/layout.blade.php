@@ -23,9 +23,9 @@
                         <div class="container">
                             <a class="navbar-brand social" href="/home"><img class="logo social" src="image/logo.PNG" alt="logo"></a>
                             <a class="nav-link social txt" href="/bootcamp">Bootcamp</a>
-                            <a class="nav-link social txt " href="#">Hackaton</a>
+                            <a class="nav-link social txt " href="#">Hackathon</a>
                             <a class="nav-link social txt " href="/blog">Blog</a>
-                            <a class="nav-link social txt" href="#">Skills</a>
+                            
                         </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                                 <span class="navbar-toggler-icon"></span>

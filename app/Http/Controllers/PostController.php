@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Auth;
 
 class PostController extends Controller
 {
@@ -38,6 +39,15 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $post =new Post();
+
+        $post->user_id = Auth::id();
+
+        $post->title = request('title');
+        $post->text = request('text');
+
+        $post->save();
+        return redirect('/blog');
     }
 
     /**
@@ -61,6 +71,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         //
+       
     }
 
     /**
