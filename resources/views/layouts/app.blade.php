@@ -21,7 +21,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+    <style>
+            .body{
+                background-image: url(/public/image/)
+            }
+            </style>
+            @yield('css')
+    
 </head>
 <body>
     <div id="app">

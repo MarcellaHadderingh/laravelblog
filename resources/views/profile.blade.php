@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
+
 @section('content')
+
 
 
 <div class="container">
@@ -21,7 +23,7 @@
 <div class="container" style="margin-top:50px;">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card text-white bg-dark">
+                <div class="card bg-light">
                     <div class="card-header"><h5>Profile</h5></div>
                     <div class="card-body">
                             {{$user->name}}
@@ -36,7 +38,7 @@
 <div class="container" style="margin-top:50px;" >
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card text-white bg-dark">
+            <div class="card bg-light">
                 <div class="card-header"><h5>Profile edit</h5></div>
                 <div class="card-body">
                     <form method="POST" action="/user/{{$user->id}}">
@@ -55,7 +57,7 @@
 <div class="container" style="margin-top:50px;" >
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card text-white bg-dark">
+                <div class="card bg-light">
                     <div class="card-header"><h5>Add Blog</h5></div>
                     <div class="card-body">
                             <form method="POST" action="/post">
@@ -78,7 +80,7 @@
     <div class="container" style="margin-top:50px;" >
             <div class="row justify-content-center">
             <div class="col-md-8">
-                    <div class="card text-white bg-dark">
+                    <div class="card bg-light">
                             <div class="card-header"><h5>Edit Blog</h5></div>
                             <div class="card-body">
 
@@ -87,4 +89,7 @@
                                     <textarea name="text" id="area" cols="60" rows="15"></textarea>
 
                                     <input type="submit" value="update">
-                                    @endsection
+
+
+ 
+@endsection
